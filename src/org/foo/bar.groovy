@@ -1,5 +1,7 @@
 package org.foo
 
+def build() {
+
 node {
 
             stage('Checkout source') {
@@ -23,5 +25,6 @@ def mvn(args, ignoreFailures) {
     sh "mvn -B ${args} -Dexternal.version-qualifier=${extVerQualifier()}"
   }
 
+}
 }
 }
